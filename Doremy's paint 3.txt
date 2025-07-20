@@ -1,0 +1,23 @@
+void solve(){
+int n;cin>>n;
+vi arr(n);
+loop(0,n) cin>>arr[i];
+unordered_map<int,int> mp;
+loop(0,n) mp[arr[i]]++;
+if(mp.size()<=2){
+    if(mp.size()==1) cout<<"Yes";
+    else{
+        int ans=0,flag=0;
+        for(auto it:mp){
+            if(flag) ans=abs(ans-it.second);
+            else{
+                ans+=it.second;
+                flag++;
+            }
+        }
+        if(ans<=1) cout<<"Yes";
+        else cout<<"No";
+    }
+}
+else cout<<"No";
+}

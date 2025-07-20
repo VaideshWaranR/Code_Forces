@@ -1,0 +1,6 @@
+void solve(){
+int n;cin>>n;
+int added=n+1,subtracted=n-1;
+if(added%3==0 || subtracted%3==0) cout<<"First";
+else cout<<"Second";
+}
